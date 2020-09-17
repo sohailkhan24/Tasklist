@@ -52,7 +52,11 @@ function getTasks() {
   });
 }
 
+
+
+
 // Add Task
+
 function addTask(e) {
   if(taskInput.value === '') {
     alert('Add a task');
@@ -85,7 +89,11 @@ function addTask(e) {
   e.preventDefault();
 }
 
+
+
+
 // Store Task
+
 function storeTaskInLocalStorage(task) {
   let tasks;
   if(localStorage.getItem('tasks') === null){
@@ -99,7 +107,10 @@ function storeTaskInLocalStorage(task) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+
+
 // Remove Task
+
 function removeTask(e) {
   if(e.target.parentElement.classList.contains('delete-item')) {
     if(confirm('Are You Sure?')) {
@@ -111,7 +122,10 @@ function removeTask(e) {
   }
 }
 
+
+
 // Remove from LS
+
 function removeTaskFromLocalStorage(taskItem) {
   let tasks;
   if(localStorage.getItem('tasks') === null){
@@ -129,7 +143,9 @@ function removeTaskFromLocalStorage(taskItem) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+
 // Clear Tasks
+
 function clearTasks() {
   // taskList.innerHTML = '';
 
@@ -144,12 +160,18 @@ function clearTasks() {
   clearTasksFromLocalStorage();
 }
 
+
+
 // Clear Tasks from LS
+
 function clearTasksFromLocalStorage() {
   localStorage.clear();
 }
 
+
+
 // Filter Tasks
+
 function filterTasks(e) {
   const text = e.target.value.toLowerCase();
 
