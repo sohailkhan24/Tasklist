@@ -144,6 +144,7 @@ function removeTaskFromLocalStorage(taskItem) {
 }
 
 
+
 // Clear Tasks
 
 function clearTasks() {
